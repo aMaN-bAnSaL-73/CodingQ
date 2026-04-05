@@ -47,7 +47,12 @@ export default function QueuePage() {
     }, 15000);
     return () => clearInterval(interval);
   }, []);
-
+useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFact(prev => (prev + 1) % funFacts.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
   // Handle side-effects cleanly when queue state updates
   useEffect(() => {
     const servingToken = queue.find(q => q.status === 'serving');
