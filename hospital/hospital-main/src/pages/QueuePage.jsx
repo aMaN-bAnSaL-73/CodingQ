@@ -68,9 +68,6 @@ export default function QueuePage() {
     return () => clearInterval(interval);
   }, []);
 
-  const servingToken = queue.find(q => q.status === 'serving');
-  const nextToken = queue.find(q => q.status === 'next');
-  const waitingTokens = queue.filter(q => q.status === 'waiting');
 
   return (
     <motion.div
