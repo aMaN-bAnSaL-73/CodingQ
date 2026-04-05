@@ -6,9 +6,7 @@ import GlassCard from '../components/ui/GlassCard';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import SkeletonLoader from '../components/ui/SkeletonLoader';
 import { statsData, weeklyData, departmentData, funFacts, healthTips, healthScoreData, appointments, doctors, queueData, patients, nearbyHospitals } from '../data/mockData';
-import PatientActiveStatus from '../components/dashboard/PatientActiveStatus';
-import PatientHealthScore from '../components/dashboard/PatientHealthScore';
-import DashboardCharts from '../components/dashboard/DashboardCharts';
+
 import {
   Users, CalendarDays, Clock, Activity, TrendingUp, Bed,
   AlertTriangle, Star, Zap, Lightbulb, Trophy, ArrowRight, MapPin, Navigation
