@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
-import { useApp } from '../context/AppContext';
+
 import { useTheme } from '../context/ThemeContext';
 import {
   Heart, ArrowRight, Clock, Bot, Activity, Shield, Zap,
