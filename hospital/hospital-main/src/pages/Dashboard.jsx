@@ -6,6 +6,9 @@ import { getGreeting } from '../utils/helpers';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import SkeletonLoader from '../components/ui/SkeletonLoader';
+import PatientActiveStatus from '../components/dashboard/PatientActiveStatus';
+import PatientHealthScore from '../components/dashboard/PatientHealthScore';
+import DashboardCharts from '../components/dashboard/DashboardCharts';
 import { statsData, weeklyData, departmentData, funFacts, healthTips, healthScoreData, appointments, doctors, queueData, patients, nearbyHospitals } from '../data/mockData';
 
 import {
