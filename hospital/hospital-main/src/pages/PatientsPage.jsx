@@ -17,6 +17,10 @@ const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 },
 };
+const filtered = patients.filter(p =>
+    p.name.toLowerCase().includes(search.toLowerCase()) ||
+    p.condition.toLowerCase().includes(search.toLowerCase())
+  );
 
 export default function PatientsPage() {
   const [search, setSearch] = useState('');
