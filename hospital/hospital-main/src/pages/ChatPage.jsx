@@ -57,28 +57,7 @@ export default function ChatPage() {
     const recognition = new SpeechRecognition();
     recognition.continuous = false;
     recognition.interimResults = true;
-    recognition.lang = 'en-US';
-
-    recognition.onresult = (event) => {
-      let finalTranscript = '';
-      let interimTranscript = '';
-
-      for (let i = event.resultIndex; i < event.results.length; i++) {
-        const transcript = event.results[i][0].transcript;
-        if (event.results[i].isFinal) {
-          finalTranscript += transcript;
-        } else {
-          interimTranscript += transcript;
-        }
-      }
-
-      if (finalTranscript) {
-        setInput(finalTranscript);
-      } else if (interimTranscript) {
-        setInput(interimTranscript);
-      }
-    };
-
+   
     recognition.onend = () => {
       setMicActive(false);
       // Auto-send if there's input after recognition ends
