@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+
 import { useApp } from '../context/AppContext';
 import { ShieldAlert, ArrowLeft, LogOut } from 'lucide-react';
 
