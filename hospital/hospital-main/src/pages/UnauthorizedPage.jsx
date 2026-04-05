@@ -63,7 +63,7 @@ export default function UnauthorizedPage() {
             onClick={handleGoBack}
             className="w-full py-3 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 text-white font-semibold text-sm shadow-lg shadow-primary-500/25 flex items-center justify-center gap-2"
           >
-            <ArrowLeft size={18} /> Return to Dashboard
+            <ArrowLeft size={18} /> Return To Dashboard
           </motion.button>
           
           <motion.button
@@ -72,7 +72,7 @@ export default function UnauthorizedPage() {
             onClick={handleLogout}
             className="w-full py-3 rounded-xl bg-gray-100 dark:bg-white/[0.04] text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-200 dark:hover:bg-white/[0.08] transition-colors flex items-center justify-center gap-2"
           >
-            <LogOut size={18} /> Sign Out
+            <LogOut size={18} /> Sign Out.
           </motion.button>
         </div>
       </motion.div>
