@@ -7,7 +7,8 @@ import AnimatedCounter from '../components/ui/AnimatedCounter';
 import { queueData, doctors, patients, funFacts } from '../data/mockData';
 import { predictWaitTime } from '../utils/helpers';
 import { Clock, Users, Zap, ChevronRight, Volume2, Timer, Sparkles } from 'lucide-react';
-
+function getQueueDoctor(q) {
+  return doctors.find(d => d.id === q.doctorId);
 function getQueuePatient(q) {
   return patients.find(p => p.id === q.patientId);
 }
