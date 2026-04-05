@@ -1,6 +1,6 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 import { useTheme } from '../context/ThemeContext';
 import {
