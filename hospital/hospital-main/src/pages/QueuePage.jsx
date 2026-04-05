@@ -59,12 +59,7 @@ export default function QueuePage() {
   }, [queue, lastAnnouncedToken, addNotification]);
 
   // Fun facts rotation
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFact(prev => (prev + 1) % funFacts.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
+
 
 
   return (
