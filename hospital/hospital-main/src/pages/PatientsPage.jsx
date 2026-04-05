@@ -17,11 +17,7 @@ export default function PatientsPage() {
   const [search, setSearch] = useState('');
   const [selectedPatient, setSelectedPatient] = useState(null);
 
-  const filtered = patients.filter(p =>
-    p.name.toLowerCase().includes(search.toLowerCase()) ||
-    p.condition.toLowerCase().includes(search.toLowerCase())
-  );
-
+ 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
