@@ -27,17 +27,7 @@ export default function PatientsPage() {
   const [selectedPatient, setSelectedPatient] = useState(null);
 
  
-  return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white font-display flex items-center gap-2">
-            <Users size={24} className="text-primary-500" />
-            Patients
-          </h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400">{patients.length} registered patients</p>
-        </div>
-        <div className="relative w-full sm:w-72">
+ 
           <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" />
           <input
             type="text"
