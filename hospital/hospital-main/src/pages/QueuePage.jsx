@@ -56,56 +56,7 @@ useEffect(() => {
   // Handle side-effects cleanly when queue state updates
   useEffect(() => {
     const servingToken = queue.find(q => q.status === 'serving');
-    if (servingToken && servingToken.tokenNo !== lastAnnouncedToken) {
-      setLastAnnouncedToken(servingToken.tokenNo);
-      
-      const patient = getQueuePatient(servingToken);
-      setAnnouncement(`Now serving ${patient?.name || 'Patient'} — Token ${servingToken.tokenNo}`);
-      addNotification({ text: `Token ${servingToken.tokenNo} is now being served`, type: 'queue' });
-
-      const timer = setTimeout(() => setAnnouncement(''), 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [queue, lastAnnouncedToken, addNotification]);
-const servingToken = queue.find(q => q.status === 'serving');
-  const nextToken = queue.find(q => q.status === 'next');
-  const waitingTokens = queue.filter(q => q.status === 'waiting');
-  // Fun facts rotation
-
-
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="space-y-6"
-    >
-      {/* Announcement Banner */}
-      <AnimatePresence>
-        {announcement && (
-          <motion.div
-            initial={{ opacity: 0, y: -20, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: 'auto' }}
-            exit={{ opacity: 0, y: -20, height: 0 }}
-            className="rounded-2xl bg-gradient-to-r from-primary-500 to-accent-500 p-4 text-white flex items-center gap-3 shadow-lg shadow-primary-500/30"
-          >
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ repeat: Infinity, duration: 1 }}
-            >
-              <Volume2 size={20} />
-            </motion.div>
-            <p className="font-semibold text-sm">{announcement}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Queue Stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <GlassCard hover={false}>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
-              <Users size={18} className="text-white" />
+   
             </div>
             <div>
               <p className="text-xs text-gray-500 dark:text-gray-400">In Queue</p>
