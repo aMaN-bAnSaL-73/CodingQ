@@ -53,11 +53,4 @@ export function formatDate(dateStr) {
   });
 }
 
-export function generateTokenId() {
-  const num = Math.floor(Math.random() * 900) + 100;
-  return `T-${num}`;
-}
 
-export function generateId() {
-  return Math.random().toString(36).substring(2, 9);
-}
