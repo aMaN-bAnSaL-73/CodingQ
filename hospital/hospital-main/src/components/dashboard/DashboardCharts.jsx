@@ -46,8 +46,8 @@ export default function DashboardCharts() {
                   boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
                 }}
               />
-              <Area type="monotone" dataKey="patients" stroke="#6366f1" fill="url(#patientGrad)" strokeWidth={2.5} dot={false} />
-              <Area type="monotone" dataKey="appointments" stroke="#06b6d4" fill="url(#apptGrad)" strokeWidth={2.5} dot={false} />
+              <Area type="monotone" dataKey="appointments" stroke="#6366f1" fill="url(#patientGrad)" strokeWidth={2.5} dot={false} />
+              <Area type="monotone" dataKey="patients" stroke="#06b6d4" fill="url(#apptGrad)" strokeWidth={2.5} dot={false} />
             </AreaChart>
           </ResponsiveContainer>
         </GlassCard>
