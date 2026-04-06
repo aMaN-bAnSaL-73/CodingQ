@@ -66,6 +66,19 @@ export default function ChatPage() {
         setInput(interimTranscript);
       }
     };
+    if (!SpeechRecognition) {
+      setMicSupported(false);
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = true;
+    recognition.lang = 'en-US';
+
+    recognition.onresult = (event) => {
+      let finalTranscript = '';
+      let interimTranscript = '';
 
     recognition.onend = () => {
       setMicActive(false);
