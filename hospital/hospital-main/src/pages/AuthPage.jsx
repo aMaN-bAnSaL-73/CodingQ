@@ -275,4 +275,45 @@ export default function AuthPage() {
               transition={{ delay: 1 }}
               className="mt-6 pt-6 border-t border-gray-100 dark:border-white/10"
             >
+               <div className="flex items-center justify-center gap-2 mb-4">
+                <Sparkles size={14} className="text-primary-500" />
+                <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">One-Click Auto Fill</span>
+              </div>
+              <div className="grid grid-cols-3 gap-2">
+                <button
+                  type="button"
+                  onClick={() => autofillDemo('patient')}
+                  disabled={loading}
+                  className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-xl bg-blue-50 dark:bg-blue-500/10 hover:bg-blue-100 dark:hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 transition-colors border border-blue-100 dark:border-blue-500/20"
+                >
+                  <UserRound size={16} />
+                  <span className="text-[10px] font-bold">Patient</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => autofillDemo('doctor')}
+                  disabled={loading}
+                  className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 hover:bg-emerald-100 dark:hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 transition-colors border border-emerald-100 dark:border-emerald-500/20"
+                >
+                  <Stethoscope size={16} />
+                  <span className="text-[10px] font-bold">Doctor</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => autofillDemo('admin')}
+                  disabled={loading}
+                  className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-xl bg-amber-50 dark:bg-amber-500/10 hover:bg-amber-100 dark:hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 transition-colors border border-amber-100 dark:border-amber-500/20"
+                >
+                  <ShieldCheck size={16} />
+                  <span className="text-[10px] font-bold">Admin</span>
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
              
