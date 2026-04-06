@@ -15,11 +15,7 @@ function getQueuePatient(q) {
 }
 
 export default function QueuePage() {
-  const { role, addNotification } = useApp();
-  const [queue, setQueue] = useState(queueData);
-  const [currentFact, setCurrentFact] = useState(0);
-  const [announcement, setAnnouncement] = useState('');
-  const [lastAnnouncedToken, setLastAnnouncedToken] = useState(null);
+ 
 
   // Simulate queue movement
   useEffect(() => {
